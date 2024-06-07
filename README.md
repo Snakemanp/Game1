@@ -18,5 +18,8 @@ If you have any suggestions or improvements, please feel free to contribute to t
 2. Build the project using Visual Studio or your preferred IDE.
 3. Run the generated executable file.
 
-  ## or
-1.clone the x64/release folder in reepository and run the .exe file directly.
+
+OR
+
+1. Clone the `x64/release` folder in the repository.
+2. Run the `.exe` file directly.
