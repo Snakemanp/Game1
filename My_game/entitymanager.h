@@ -40,7 +40,8 @@ public:
 		for (int i = 0; i < entities.size(); i++) {
 			if (entities[i] == edel) {
 				entities[i] = entities[entities.size() - 1];
-				entities.pop_back();
+				entities[entities.size()-1].reset();
+				(entities.pop_back());
 				break;
 			}
 		}
@@ -48,10 +49,12 @@ public:
 		for (int i = 0; i < temp.size(); i++) {
 			if (temp[i] == edel) {
 				temp[i] = temp[temp.size() - 1];
+				temp[temp.size() - 1].reset();
 				temp.pop_back();
 				break;
 			}
 		}
+		edel.reset();
 	}
 
 };

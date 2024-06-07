@@ -6,8 +6,8 @@
 #include <imgui-SFML.h>
 #include "game.cpp"
 #include <iostream>
-#include<Windows.h>
-#include"Home.cpp"
+#include <Windows.h>
+#include "Home.cpp"
 
 int main()
 {

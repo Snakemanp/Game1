@@ -75,8 +75,8 @@
     <LibraryPath>C:\SFML-2.6.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\SFML-2.6.1\include;..\Imgui;..\Imgui\sfml;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SFML-2.6.1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\external\sfml;..\external\imgui;..\external\SFML-2.6.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\external\SFML-2.6.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,26 +126,31 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\external\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\SFML-2.6.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\external\SFML-2.6.1\lib;..\external\SFML-2.6.1\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-window.lib;sfml-system.lib;sfml-graphics.lib;sfml-main.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Imgui\imgui.cpp" />
-    <ClCompile Include="..\Imgui\imgui_demo.cpp" />
-    <ClCompile Include="..\Imgui\imgui_draw.cpp" />
-    <ClCompile Include="..\Imgui\imgui_impl_dx12.cpp" />
-    <ClCompile Include="..\Imgui\imgui_impl_win32.cpp" />
-    <ClCompile Include="..\Imgui\imgui_tables.cpp" />
-    <ClCompile Include="..\Imgui\imgui_widgets.cpp" />
-    <ClCompile Include="..\Imgui\sfml\imgui-SFML.cpp" />
+    <ClCompile Include="..\external\imgui\imgui.cpp" />
+    <ClCompile Include="..\external\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\external\imgui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="..\external\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\external\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\external\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\external\sfml\imgui-SFML.cpp" />
+    <ClCompile Include="..\external\sfml\Source.cpp" />
     <ClCompile Include="classes.h" />
     <ClCompile Include="entity.h" />
     <ClCompile Include="entitymanager.h" />
@@ -158,23 +163,23 @@
     <ClCompile Include="vec2.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Imgui\imconfig.h" />
-    <ClInclude Include="..\Imgui\imgui.h" />
-    <ClInclude Include="..\Imgui\imgui_impl_dx12.h" />
-    <ClInclude Include="..\Imgui\imgui_impl_win32.h" />
-    <ClInclude Include="..\Imgui\imgui_internal.h" />
-    <ClInclude Include="..\Imgui\imstb_rectpack.h" />
-    <ClInclude Include="..\Imgui\imstb_textedit.h" />
-    <ClInclude Include="..\Imgui\imstb_truetype.h" />
-    <ClInclude Include="..\Imgui\sfml\imconfig-SFML.h" />
-    <ClInclude Include="..\Imgui\sfml\imgui-SFML.h" />
-    <ClInclude Include="..\Imgui\sfml\imgui-SFML_export.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Imgui\imgui.ini" />
-  </ItemGroup>
-  <ItemGroup>
     <Font Include="Wonderbar-pALD.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\external\imgui\imconfig.h" />
+    <ClInclude Include="..\external\imgui\imgui.h" />
+    <ClInclude Include="..\external\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="..\external\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="..\external\imgui\imgui_internal.h" />
+    <ClInclude Include="..\external\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\external\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\external\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\external\sfml\imconfig-SFML.h" />
+    <ClInclude Include="..\external\sfml\imgui-SFML.h" />
+    <ClInclude Include="..\external\sfml\imgui-SFML_export.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\external\imgui\imgui.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

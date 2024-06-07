@@ -1,124 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="include">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="src">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Imgui">
-      <UniqueIdentifier>{ac8f3777-a1d0-4001-a85c-ebef7e727e35}</UniqueIdentifier>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Imgui\sfml">
-      <UniqueIdentifier>{6b57726d-885e-4f96-b99c-ed97cecb2620}</UniqueIdentifier>
+    <Filter Include="external">
+      <UniqueIdentifier>{a0b481af-3d0d-4ded-9dfd-b7dfe1adb38d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\SFML">
+      <UniqueIdentifier>{ed78d5cc-e740-4572-a826-cc95e58c2bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\imgui">
+      <UniqueIdentifier>{8038b73e-0775-455e-8dd8-c555439e77d6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="My_game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>main</Filter>
     </ClCompile>
     <ClCompile Include="game.cpp">
-      <Filter>Resource Files</Filter>
+      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="physics.cpp">
-      <Filter>Resource Files</Filter>
+      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="physics.h">
-      <Filter>Header Files</Filter>
+      <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="classes.h">
-      <Filter>Header Files</Filter>
+      <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="entity.h">
-      <Filter>Header Files</Filter>
+      <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="entitymanager.h">
-      <Filter>Header Files</Filter>
+      <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="health.h">
-      <Filter>Header Files</Filter>
+      <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="vec2.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui_demo.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui_draw.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui_impl_dx12.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui_impl_win32.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui_tables.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\imgui_widgets.cpp">
-      <Filter>Imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Imgui\sfml\imgui-SFML.cpp">
-      <Filter>Imgui\sfml</Filter>
+      <Filter>include</Filter>
     </ClCompile>
     <ClCompile Include="Home.cpp">
-      <Filter>Resource Files</Filter>
+      <Filter>src</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\Imgui\imconfig.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imgui.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imgui_impl_dx12.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imgui_impl_win32.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imgui_internal.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imstb_rectpack.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imstb_textedit.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\imstb_truetype.h">
-      <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\sfml\imconfig-SFML.h">
-      <Filter>Imgui\sfml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\sfml\imgui-SFML.h">
-      <Filter>Imgui\sfml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Imgui\sfml\imgui-SFML_export.h">
-      <Filter>Imgui\sfml</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Imgui\imgui.ini">
-      <Filter>Imgui</Filter>
-    </None>
+    <ClCompile Include="..\external\sfml\imgui-SFML.cpp">
+      <Filter>external\SFML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\sfml\Source.cpp">
+      <Filter>external\SFML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_demo.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_draw.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_impl_dx12.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_impl_win32.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_tables.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_widgets.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Wonderbar-pALD.ttf">
-      <Filter>Resource Files</Filter>
+      <Filter>src</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\external\sfml\imconfig-SFML.h">
+      <Filter>external\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\sfml\imgui-SFML.h">
+      <Filter>external\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\sfml\imgui-SFML_export.h">
+      <Filter>external\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imconfig.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imgui.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imgui_impl_dx12.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imgui_impl_win32.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imgui_internal.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imstb_rectpack.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imstb_textedit.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imstb_truetype.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\external\imgui\imgui.ini">
+      <Filter>external\imgui</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -172,8 +172,8 @@ public:
             dead[i]->shape->setFillColor(tempcol);
             dead[i]->shape->setOutlineColor(sf::Color(255, 255, 255, tempcol.a));
             dead[i]->life->update();
-            if (tempcol.a <= 0) Manager.del_entity(dead[i]);
             physics::bounce(*dead[i], view.getSize().x, view.getSize().y);
+            if (tempcol.a <= 0) Manager.del_entity(dead[i]);
         }
         for (int i = 0; i < bullets.size(); i++) {
             for (int j = 0; j < enemies.size(); j++) {

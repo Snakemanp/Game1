@@ -16,5 +16,9 @@ public:
 	friend class EntityManager;
 	std::shared_ptr<objtrans> obj_trans;
 	std::shared_ptr<lifespan> life;
+	~Entity() {
+		obj_trans.reset();
+		life.reset();
+	}
 };
 #endif // !entity_class
