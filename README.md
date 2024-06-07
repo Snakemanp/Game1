@@ -17,5 +17,6 @@ If you have any suggestions or improvements, please feel free to contribute to t
 1. Clone the repository to your local machine.
 2. Build the project using Visual Studio or your preferred IDE.
 3. Run the generated executable file.
-##or
+
+## or
 1.clone the x64/release folder in reepository and run the .exe file directly.
