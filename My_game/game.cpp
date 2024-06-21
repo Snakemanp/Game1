@@ -9,6 +9,7 @@
 #include<imgui-SFML.h>
 #include<imgui.h>
 #include <iostream>
+#include"Sound.h"
 class game {
     sf::RenderWindow& window;
     EntityManager Manager;
@@ -37,6 +38,7 @@ public:
         srand(time(0));
         font.loadFromFile("Wonderbar-pALD.ttf");
         text.setFont(font);
+        Sound::set();
     }
     void display() {
         std::string score = "Score " + std::to_string(player->score);
@@ -62,6 +64,7 @@ public:
         player = temp;
     }
     void spawn_bullet() {
+        Sound::play_shoot();
         vec2 temppos = uinput.shootpos;
         std::shared_ptr<Entity> temp = Manager.add_entity("Bullet");
         temp->shape = std::make_shared<sf::CircleShape>(8.0);
@@ -72,6 +75,7 @@ public:
         temp->life = std::make_shared<lifespan>(45);
     }
     void special_shoot() {
+        Sound::play_shoot();
         std::shared_ptr<Entity> temp;
         vec2 temppos;
         int no_bullets = 15;
@@ -122,6 +126,7 @@ public:
         return temp;
     }
     void remove_enemy(std::shared_ptr<Entity>& enemy) {
+        Sound::play_kill();
         vec2 pos = enemy->obj_trans->pos;
         float radius = enemy->shape->getRadius();
         float rspeed = enemy->obj_trans->rspeed;
@@ -202,6 +207,7 @@ public:
         for (int i = 0; i < enemies.size(); i++) {
             if (physics::collision(*player, *enemies[i])) {
                 end = true;
+                Sound::play_die();
             }
         }
     }
@@ -230,6 +236,9 @@ public:
                     if (power_shoot == 3) {
                         special_shoot();
                         power_shoot = 0;
+                    }
+                    else {
+                        Sound::play_pup();
                     }
                 }
             }

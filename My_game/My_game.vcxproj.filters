@@ -22,6 +22,9 @@
     <Filter Include="external\imgui">
       <UniqueIdentifier>{8038b73e-0775-455e-8dd8-c555439e77d6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{bc465369-ee03-49cb-9b48-c05e5d0d402d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="My_game.cpp">
@@ -81,6 +84,9 @@
     <ClCompile Include="..\external\imgui\imgui_widgets.cpp">
       <Filter>external\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Wonderbar-pALD.ttf">
@@ -121,10 +127,27 @@
     <ClInclude Include="..\external\imgui\imstb_truetype.h">
       <Filter>external\imgui</Filter>
     </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\imgui\imgui.ini">
       <Filter>external\imgui</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="explosion.wav">
+      <Filter>Sound</Filter>
+    </Media>
+    <Media Include="hurt.wav">
+      <Filter>Sound</Filter>
+    </Media>
+    <Media Include="power_up.wav">
+      <Filter>Sound</Filter>
+    </Media>
+    <Media Include="tap.wav">
+      <Filter>Sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>
