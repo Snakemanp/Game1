@@ -130,6 +130,12 @@
     <ClInclude Include="Sound.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\imgui\imgui.ini">
@@ -149,5 +155,15 @@
     <Media Include="tap.wav">
       <Filter>Sound</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>main</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>main</Filter>
+    </Image>
   </ItemGroup>
 </Project>

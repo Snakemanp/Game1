@@ -8,6 +8,7 @@
 #include <iostream>
 #include <Windows.h>
 #include "Home.cpp"
+#include "Resources.h"
 
 int main()
 {
@@ -21,7 +22,15 @@ int main()
     int width = workArea.right - workArea.left;
     int height = workArea.bottom - workArea.top;
 
-    sf::RenderWindow window(sf::VideoMode(width, height), "Game1", sf::Style::Default);
+    sf::RenderWindow window(sf::VideoMode(width, height), "Geo-Wars", sf::Style::Default);
+    HWND hwnd = window.getSystemHandle();
+
+    HICON hIcon = static_cast<HICON>(LoadImage(NULL, L"icon.ico", IMAGE_ICON, 0, 0, LR_LOADFROMFILE | LR_DEFAULTSIZE | LR_SHARED));
+    if (hIcon) {
+        SendMessage(hwnd, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
+        SendMessage(hwnd, WM_SETICON, ICON_BIG, (LPARAM)hIcon);
+    }
+
     window.setPosition(sf::Vector2i(0,0));
     window.setFramerateLimit(30);
 
@@ -42,7 +51,9 @@ int main()
         window.display();
     }
     home.~Home();
-
+    if (hIcon) {
+        DestroyIcon(hIcon);
+    }
     return 0;
 
 }

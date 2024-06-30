@@ -162,6 +162,9 @@
     <ClCompile Include="physics.cpp" />
     <ClCompile Include="physics.h" />
     <ClCompile Include="Sound.cpp" />
+    <ResourceCompile Include="resource.rc">
+      <FileType>CppCode</FileType>
+    </ResourceCompile>
     <ClCompile Include="vec2.h" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +182,8 @@
     <ClInclude Include="..\external\sfml\imconfig-SFML.h" />
     <ClInclude Include="..\external\sfml\imgui-SFML.h" />
     <ClInclude Include="..\external\sfml\imgui-SFML_export.h" />
+    <ClInclude Include="Resources.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Sound.h" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +194,9 @@
     <Media Include="hurt.wav" />
     <Media Include="power_up.wav" />
     <Media Include="tap.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
